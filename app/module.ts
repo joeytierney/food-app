@@ -13,6 +13,7 @@ import RestaurantItemComponent from './restaurant-item/restaurant-item.component
 import ServicesComponent from './services/services.component';
 import NavAreaComponent from './nav-area/nav-area.component';
 import RestaurantDetailComponent from './restaurant-detail/restaurant-detail.component';
+import MapComponent from './map/map.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import RestaurantDetailComponent from './restaurant-detail/restaurant-detail.com
         RestaurantItemComponent,
         HomeComponent,
         NavAreaComponent,
-        RestaurantDetailComponent
+        RestaurantDetailComponent,
+        MapComponent
     ],
     bootstrap: [ApplicationComponent]
 })

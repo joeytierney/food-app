@@ -14,6 +14,7 @@ var RestaurantItemComponent = (function () {
     function RestaurantItemComponent() {
     }
     RestaurantItemComponent.prototype.ngOnInit = function () {
+        this.imgUrl = '/images/' + this.restaurant.id + '.jpg';
     };
     __decorate([
         core_1.Input(), 

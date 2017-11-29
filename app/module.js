@@ -22,6 +22,7 @@ var restaurant_item_component_1 = require('./restaurant-item/restaurant-item.com
 var services_component_1 = require('./services/services.component');
 var nav_area_component_1 = require('./nav-area/nav-area.component');
 var restaurant_detail_component_1 = require('./restaurant-detail/restaurant-detail.component');
+var map_component_1 = require('./map/map.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -47,7 +48,8 @@ var AppModule = (function () {
                 restaurant_item_component_1.default,
                 home_component_1.default,
                 nav_area_component_1.default,
-                restaurant_detail_component_1.default
+                restaurant_detail_component_1.default,
+                map_component_1.default
             ],
             bootstrap: [application_component_1.default]
         }), 

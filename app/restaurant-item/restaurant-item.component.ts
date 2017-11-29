@@ -13,7 +13,7 @@ export default class RestaurantItemComponent implements OnInit {
 
 	imgUrl: string;
 	
-	ngOnInit() {
-
+	ngOnInit(){
+		this.imgUrl = '/images/' + this.restaurant.id + '.jpg'
 	}
 }
