@@ -1,11 +1,20 @@
 <div class="restaurantItem">
-	<h3>{{restaurant.name}}</h3>
+	<h1>{{restaurant.name}}</h1>
 	<img [attr.src]="restaurant.imageURL"/>
-	<h3>{{restaurant.blurb}}</h3>
-	<h3>Location: {{restaurant.address}}</h3>
-	<h3>Opening hours: {{restaurant.hours}}</h3>
-	<h3>Cuisines: {{restaurant.cuisines}}</h3>
-	<h3>Facilities available: {{restaurant.facilities}}</h3>
-</div>
+	<br>
+	<br>
+	<h4><i>{{restaurant.blurb}}</i></h4>
+	<div><b>Location:</b> {{restaurant.address}}</div>
+	<div><b>Opening hours:</b> {{restaurant.hours}}</div>
+	<div><b>Cuisines:</b> {{restaurant.cuisines}}</div>
+	<div><b>Facilities available:</b> {{restaurant.facilities}}</div>
+	<h3><b>Reviews</b></h3>
+	{{restaurant.reviews}}
+	<!-- <div class = "reviews">
+		<div *ngFor = "let review of reviews">
+			{{review}}
+			<br><br>
+		</div>
+	</div> -->
 <osl-map></osl-map>
 <a routerLink="/home">Back to all restaurants</a>

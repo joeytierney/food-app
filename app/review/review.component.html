@@ -1,0 +1,3 @@
+<input [(ngModel)]="reviewMessage" placeholder={{placeH}}>
+<button (click)="addReview()">Submit</button>
+<span *ngIf="reviewMessages.length !=0" title="{{reviewMessages.length}} review(s) so far">[{{reviewMessages.length}}]</span>

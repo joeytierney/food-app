@@ -11,10 +11,11 @@ import {ActivatedRoute} from '@angular/router';
 
 export default class RestaurantItemComponent implements OnInit, OnDestroy {
 
+	reviews: Array<string> = [];
+
 	constructor(private restaurantService: RestaurantService, private route: ActivatedRoute) {
 
 	}// end constructor
-
 	@Input() restaurant: Restaurant;
 
 	restaurantIn: Restaurant;
@@ -25,8 +26,10 @@ export default class RestaurantItemComponent implements OnInit, OnDestroy {
 	subscriberCounty: any;
 	
 	ngOnInit(){
-		//this.imgUrl = '/images/' + this.restaurant.id + '.jpg';
 
+		this.reviews = this.restaurant.reviews;
+        console.log(this.reviews);
+		//this.imgUrl = '/images/' + this.restaurant.id + '.jpg';
 		//this.subscriberParams = this.route.params.subscribe(params => {
 		//	let restaurantId: number = +params['id'];
 		//	this.restaurant = this.restaurantService.getRestaurantById(restaurantId);

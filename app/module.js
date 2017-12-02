@@ -23,6 +23,7 @@ var services_component_1 = require('./services/services.component');
 var nav_area_component_1 = require('./nav-area/nav-area.component');
 var restaurant_detail_component_1 = require('./restaurant-detail/restaurant-detail.component');
 var map_component_1 = require('./map/map.component');
+var review_component_1 = require('./review/review.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -35,7 +36,6 @@ var AppModule = (function () {
                     { path: 'about', component: about_component_1.default },
                     { path: 'services', component: services_component_1.default },
                     { path: 'details/:id', component: restaurant_detail_component_1.default },
-                    { path: 'details/:county', component: restaurant_item_component_1.default },
                     { path: '**', component: pagenotfound_component_1.default }
                 ])
             ],
@@ -50,7 +50,8 @@ var AppModule = (function () {
                 home_component_1.default,
                 nav_area_component_1.default,
                 restaurant_detail_component_1.default,
-                map_component_1.default
+                map_component_1.default,
+                review_component_1.default
             ],
             bootstrap: [application_component_1.default]
         }), 

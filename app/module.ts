@@ -14,6 +14,7 @@ import ServicesComponent from './services/services.component';
 import NavAreaComponent from './nav-area/nav-area.component';
 import RestaurantDetailComponent from './restaurant-detail/restaurant-detail.component';
 import MapComponent from './map/map.component';
+import ReviewComponent from './review/review.component';
 
 
 @NgModule({
@@ -24,7 +25,6 @@ import MapComponent from './map/map.component';
     	{path: 'about', component: AboutComponent},
     	{path: 'services', component: ServicesComponent},
         {path: 'details/:id', component: RestaurantDetailComponent},
-        {path: 'details/:county', component: RestaurantItemComponent},
     	{path: '**', component: PageNotFoundComponent}
     	])
     ],
@@ -39,7 +39,8 @@ import MapComponent from './map/map.component';
         HomeComponent,
         NavAreaComponent,
         RestaurantDetailComponent,
-        MapComponent
+        MapComponent,
+        ReviewComponent
     ],
     bootstrap: [ApplicationComponent]
 })
