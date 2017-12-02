@@ -28,6 +28,14 @@ var RestaurantService = (function () {
     RestaurantService.prototype.getRestaurants = function () {
         return this.restaurants;
     }; // end getRestaurant()
+    RestaurantService.prototype.getRestaurantsByCounty = function (countyIn) {
+        for (var i = 0; i < this.restaurants.length; i++) {
+            if (this.restaurants[i].county === countyIn) {
+                this.countyOut.push(this.restaurants[i]);
+            }
+        }
+        return this.countyOut;
+    }; // end getRestaurant()
     RestaurantService.prototype.getRestaurantById = function (id) {
         return this.restaurants[id];
     }; // end getRestaurantById()

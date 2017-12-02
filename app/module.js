@@ -35,6 +35,7 @@ var AppModule = (function () {
                     { path: 'about', component: about_component_1.default },
                     { path: 'services', component: services_component_1.default },
                     { path: 'details/:id', component: restaurant_detail_component_1.default },
+                    { path: 'details/:county', component: restaurant_item_component_1.default },
                     { path: '**', component: pagenotfound_component_1.default }
                 ])
             ],

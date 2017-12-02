@@ -18,6 +18,7 @@ export class Restaurant {
 export class RestaurantService {
 
 	private restaurants: Array<Restaurant>;
+	private countyOut: Array<Restaurant>;
 
 	constructor() {
 		this.restaurants = [
@@ -32,6 +33,16 @@ export class RestaurantService {
 
 	getRestaurants(): Array<Restaurant> {
 		return this.restaurants;
+	}// end getRestaurant()
+
+	getRestaurantsByCounty(countyIn: string): Array<Restaurant> {
+		
+		for (var i = 0; i < this.restaurants.length; i++) {
+			if(this.restaurants[i].county===countyIn) {
+				this.countyOut.push(this.restaurants[i]);
+			}
+		}
+		return this.countyOut;
 	}// end getRestaurant()
 
 	getRestaurantById(id: number): Restaurant {

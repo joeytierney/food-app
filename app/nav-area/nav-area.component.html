@@ -1,4 +1,3 @@
-<!-- Jumbotron -->
 <div class="jumbotron">
   <h1>Choose a place to eat!</h1>
   <p class="lead">Select a restaurant by what you would like to eat.<br> Choose from many counties, cusine types and ratings</p>
@@ -9,7 +8,7 @@
     <a class="dropdown-menu" data-toggle="dropdown" href="#">County
     <span class="caret"></span></a>
     <ul class="dropdown-menu">
-      <li><a data-toggle="tab" href="#flash">Dublin</a></li>
+      <li><a data-toggle="tab" [routerLink]="['/details', restaurant.county]">Dublin</a></li>
       <li><a data-toggle="tab" href="#kidflash">Cork</a></li>
     </ul>
   </li>

@@ -24,6 +24,7 @@ import MapComponent from './map/map.component';
     	{path: 'about', component: AboutComponent},
     	{path: 'services', component: ServicesComponent},
         {path: 'details/:id', component: RestaurantDetailComponent},
+        {path: 'details/:county', component: RestaurantItemComponent},
     	{path: '**', component: PageNotFoundComponent}
     	])
     ],
