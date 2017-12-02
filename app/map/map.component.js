@@ -14,6 +14,7 @@ var MapComponent = (function () {
     }
     MapComponent.prototype.ngOnInit = function () {
         var mapProp = {
+            // create map according to LatLng stored in restaurant item
             center: new google.maps.LatLng(53.392934, -6.250284),
             zoom: 20,
             mapTypeId: google.maps.MapTypeId.ROADMAP

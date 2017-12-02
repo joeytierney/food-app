@@ -8,8 +8,9 @@ import {ActivatedRoute} from '@angular/router';
 	providers:		[RestaurantService],
 	templateUrl:	'nav-area.component.html',
 })
-export default class NavAreaComponent implements OnInit, OnDestroy {
+export default class NavAreaComponent {
 
+/**
 	@Input() restaurant: Restaurant;
 
 	subscriberCounty: any;
@@ -29,4 +30,5 @@ export default class NavAreaComponent implements OnInit, OnDestroy {
 	ngOnDestroy() {
 		this.subscriberCounty.unsubscribe();
 	}// end OnDestroy
+	**/
 }

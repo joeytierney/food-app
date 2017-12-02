@@ -21,11 +21,11 @@ export default class RestaurantItemComponent implements OnInit, OnDestroy {
 
 	subscriberParams: any;
 
-	imgUrl: string;
+	//imgUrl: string;
 	subscriberCounty: any;
 	
 	ngOnInit(){
-		this.imgUrl = '/images/' + this.restaurant.id + '.jpg';
+		//this.imgUrl = '/images/' + this.restaurant.id + '.jpg';
 
 		//this.subscriberParams = this.route.params.subscribe(params => {
 		//	let restaurantId: number = +params['id'];

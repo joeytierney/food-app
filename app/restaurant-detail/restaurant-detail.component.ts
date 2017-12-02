@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, Input, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {RestaurantService, Restaurant} from '../restaurant-service/restaurant-service';
 
@@ -10,17 +10,23 @@ import {RestaurantService, Restaurant} from '../restaurant-service/restaurant-se
 
 export default class RestaurantDetailComponent implements OnInit, OnDestroy {
 
+	//@Input() restaurantInput: Restaurant;
 	restaurant: Restaurant;
+	
+
 	subscriberParams: any;
+	imageURL: string;
 
 	constructor(private restaurantService: RestaurantService, private route: ActivatedRoute) {
 
 	}// end constructor
 
 	ngOnInit() {
+
 		this.subscriberParams = this.route.params.subscribe(params => {
-			let restaurantId: number = +params['id'];
-			this.restaurant = this.restaurantService.getRestaurantById(restaurantId);
+			let restaurantId: number = +params['id'];	// set restaurant id
+			this.restaurant = this.restaurantService.getRestaurantById(restaurantId);	// get restaurant by id
+			this.restaurant.imageURL = 'images/' + this.restaurant.id + '.jpg';	// set image based on restaurant id
 		});
 	}// end OnInit
 
