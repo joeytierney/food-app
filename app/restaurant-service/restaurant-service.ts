@@ -10,7 +10,8 @@ export class Restaurant {
 			public imageURL: string,
 			public hours: string,
 			public cuisines: Array<string>,
-			//public LatLng: Array<number>,
+			//public Lat: number,
+			//public Lng: number,
 			public facilities: Array<string>) {
 
 	}

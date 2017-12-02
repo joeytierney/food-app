@@ -1,7 +1,8 @@
 "use strict";
 var Restaurant = (function () {
     function Restaurant(id, county, name, blurb, address, imageURL, hours, cuisines, 
-        //public LatLng: Array<number>,
+        //public Lat: number,
+        //public Lng: number,
         facilities) {
         this.id = id;
         this.county = county;

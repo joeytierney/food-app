@@ -1,4 +1,59 @@
-<osl-nav-area></osl-nav-area>
+<!--<osl-nav-area></osl-nav-area>-->
+
+<div class="jumbotron">
+  <h1>Choose a place to eat!</h1>
+  <p class="lead">Select a restaurant by what you would like to eat.<br> Choose from many counties, cusine types and ratings</p>
+
+  <ul class="nav nav-pills">
+  <!-- Dropdown menu item
+  <li class="dropdown-county">
+    <a class="dropdown-menu" data-toggle="dropdown" href="#">County
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a data-toggle="tab" routerLink="'/home' [queryParams]='Dublin'">Dublin</a></li>
+      <li><a data-toggle="tab" href="#kidflash">Cork</a></li>
+      <li><a data-toggle="tab" href="#greenarrow">Galway</a></li>
+      <li><a data-toggle="tab" href="#lucifier">Limerick</a></li>
+      <li><a data-toggle="tab" href="#constantine">Kilkenny</a></li>
+      <li><a data-toggle="tab" href="#firestorm">Wexford</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown-cuisine">
+    <a class="dropdown-menu" data-toggle="dropdown" href="#">Cuisine Type
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a data-toggle="tab" href="#flash">Chinese</a></li>
+      <li><a data-toggle="tab" href="#kidflash">Indian</a></li>
+      <li><a data-toggle="tab" href="#greenarrow">Thai</a></li>
+      <li><a data-toggle="tab" href="#lucifier">French</a></li>
+      <li><a data-toggle="tab" href="#constantine">Irish</a></li>
+      <li><a data-toggle="tab" href="#firestorm">Asian</a></li>
+      <li><a data-toggle="tab" href="#deathstroke">European</a></li>
+    </ul>
+  </li>
+
+   <li class="dropdown-rating">
+    <a class="dropdown-menu" data-toggle="dropdown" href="#">Rating
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a data-toggle="tab" href="#flash">1</a></li>
+      <li><a data-toggle="tab" href="#kidflash">2</a></li>
+      <li><a data-toggle="tab" href="#greenarrow">3</a></li>
+      <li><a data-toggle="tab" href="#lucifier">4</a></li>
+      <li><a data-toggle="tab" href="#constantine">5</a></li>
+    </ul>
+  </li>
+  -->
+
+  <li class="dropdown-county">
+    <label>County</label>
+    <select>
+      <option *ngIf='selectedCounty.id == 0' value="0">--Select--</option>
+      <option *ngFor="let county of counties " value= {{county.id}}>{{county.name}}</option>
+    </select>
+</ul>
+</div>
 
 <div *ngFor="let r of restaurants">
 	<osl-restaurant-item

@@ -24,6 +24,13 @@ export default class RestaurantDetailComponent implements OnInit, OnDestroy {
 	ngOnInit() {
 
 		this.subscriberParams = this.route.params.subscribe(params => {
+			let restaurantCounty: string = params['county'];	// set restaurant county
+			console.log(restaurantCounty);
+			//this.restaurant = this.restaurantService.getRestaurantsByCounty(restaurantCounty);	// get restaurant by county
+			//this.restaurant.imageURL = 'images/' + this.restaurant.id + '.jpg';	// set image based on restaurant id
+		});
+
+		this.subscriberParams = this.route.params.subscribe(params => {
 			let restaurantId: number = +params['id'];	// set restaurant id
 			this.restaurant = this.restaurantService.getRestaurantById(restaurantId);	// get restaurant by id
 			this.restaurant.imageURL = 'images/' + this.restaurant.id + '.jpg';	// set image based on restaurant id

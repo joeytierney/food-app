@@ -9,18 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var restaurant_service_1 = require('../restaurant-service/restaurant-service');
 var MapComponent = (function () {
     function MapComponent() {
     }
     MapComponent.prototype.ngOnInit = function () {
         var mapProp = {
             // create map according to LatLng stored in restaurant item
-            center: new google.maps.LatLng(53.392934, -6.250284),
+            center: new google.maps.LatLng(53.366908, -6.173503),
             zoom: 20,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', restaurant_service_1.Restaurant)
+    ], MapComponent.prototype, "restaurantInput", void 0);
     MapComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
