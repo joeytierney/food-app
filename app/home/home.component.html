@@ -1,11 +1,12 @@
-<!--<osl-nav-area></osl-nav-area>-->
+<osl-nav-area></osl-nav-area>
 
+<!--
 <div class="jumbotron">
   <h1>Choose a place to eat!</h1>
   <p class="lead">Select a restaurant by what you would like to eat.<br> Choose from many counties, cusine types and ratings</p>
 
   <ul class="nav nav-pills">
-  <!-- Dropdown menu item
+  <!-- Dropdown menu item --
   <li class="dropdown-county">
     <a class="dropdown-menu" data-toggle="dropdown" href="#">County
     <span class="caret"></span></a>
@@ -44,7 +45,6 @@
       <li><a data-toggle="tab" href="#constantine">5</a></li>
     </ul>
   </li>
-  -->
 
   <li class="dropdown-county">
     <label>County</label>
@@ -54,6 +54,8 @@
     </select>
 </ul>
 </div>
+
+-->
 
 <div *ngFor="let r of restaurants">
 	<osl-restaurant-item

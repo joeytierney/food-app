@@ -12,21 +12,16 @@ export default class NavAreaComponent {
 
 /**
 	@Input() restaurant: Restaurant;
-
 	subscriberCounty: any;
 	restaurantIn: Array<Restaurant>;
-
 	constructor(private restaurantService: RestaurantService, private route: ActivatedRoute) {
-
 	}// end constructor
-
 	ngOnInit() {
 		this.subscriberCounty = this.route.data.subscribe(params => {
 			let countyIn: string = params['county'];
 			this.restaurantIn = this.restaurantService.getRestaurantsByCounty(countyIn);
 		});
 	}// end OnInit
-
 	ngOnDestroy() {
 		this.subscriberCounty.unsubscribe();
 	}// end OnDestroy

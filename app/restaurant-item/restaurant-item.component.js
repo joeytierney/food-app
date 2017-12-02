@@ -15,9 +15,9 @@ var RestaurantItemComponent = (function () {
     function RestaurantItemComponent(restaurantService, route) {
         this.restaurantService = restaurantService;
         this.route = route;
+        this.reviews = [];
     } // end constructor
     RestaurantItemComponent.prototype.ngOnInit = function () {
-        //this.imgUrl = '/images/' + this.restaurant.id + '.jpg';
     };
     RestaurantItemComponent.prototype.ngOnDestroy = function () {
         //this.subscriberParams.unsubscribe();
