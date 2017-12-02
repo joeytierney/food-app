@@ -22,6 +22,8 @@ var RestaurantDetailComponent = (function () {
             var restaurantId = +params['id']; // set restaurant id
             _this.restaurant = _this.restaurantService.getRestaurantById(restaurantId); // get restaurant by id
             _this.restaurant.imageURL = 'images/' + _this.restaurant.id + '.jpg'; // set image based on restaurant id
+            _this.restaurant.mapImage = 'images/map/' + _this.restaurant.id + '.png';
+            _this.restaurant.menuImage = 'images/menu/' + _this.restaurant.id + '.jpg';
         });
     }; // end OnInit
     RestaurantDetailComponent.prototype.ngOnDestroy = function () {

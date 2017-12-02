@@ -8,6 +8,8 @@
 	<div><b>Opening hours:</b> {{restaurant.hours}}</div>
 	<div><b>Cuisines:</b> {{restaurant.cuisines}}</div>
 	<div><b>Facilities available:</b> {{restaurant.facilities}}</div>
+	<h3><b><i>Menu</i></b></h3>
+	<img [attr.src]="restaurant.menuImage"/>
 	<h3><b>Reviews</b></h3>
 	{{restaurant.reviews}}
 	<!-- <div class = "reviews">
@@ -16,5 +18,6 @@
 			<br><br>
 		</div>
 	</div> -->
+<img [attr.src]="restaurant.mapImage"/>
 <osl-map></osl-map>
 <a routerLink="/home">Back to all restaurants</a>

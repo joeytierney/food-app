@@ -16,6 +16,8 @@ export default class RestaurantDetailComponent implements OnInit, OnDestroy {
 
 	subscriberParams: any;
 	imageURL: string;
+	mapImage: string;
+	menuImage: string;
 
 	constructor(private restaurantService: RestaurantService, private route: ActivatedRoute) {
 
@@ -26,6 +28,8 @@ export default class RestaurantDetailComponent implements OnInit, OnDestroy {
 			let restaurantId: number = +params['id'];	// set restaurant id
 			this.restaurant = this.restaurantService.getRestaurantById(restaurantId);	// get restaurant by id
 			this.restaurant.imageURL = 'images/' + this.restaurant.id + '.jpg';	// set image based on restaurant id
+			this.restaurant.mapImage = 'images/map/' + this.restaurant.id + '.png';
+			this.restaurant.menuImage = 'images/menu/' + this.restaurant.id + '.jpg';
 		});
 	}// end OnInit
 	ngOnDestroy() {
