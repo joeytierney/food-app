@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var Restaurant = (function () {
-    function Restaurant(id, county, name, blurb, address, imageURL, hours, cuisines, facilities) {
+    function Restaurant(id, county, name, blurb, address, imageURL, hours, cuisines, facilities, reviews) {
         this.id = id;
         this.county = county;
         this.name = name;
@@ -20,6 +20,7 @@ var Restaurant = (function () {
         this.hours = hours;
         this.cuisines = cuisines;
         this.facilities = facilities;
+        this.reviews = reviews;
     }
     return Restaurant;
 }());

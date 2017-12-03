@@ -26,9 +26,8 @@ export default class RestaurantItemComponent implements OnInit, OnDestroy {
 	subscriberCounty: any;
 	
 	ngOnInit(){
-<<<<<<< HEAD
+
 		//this.imgUrl = '/images/' + this.restaurant.id + '.jpg';
-=======
 
 		this.reviews = this.restaurant.reviews;
         console.log(this.reviews);
@@ -37,7 +36,6 @@ export default class RestaurantItemComponent implements OnInit, OnDestroy {
 		//	let restaurantId: number = +params['id'];
 		//	this.restaurant = this.restaurantService.getRestaurantById(restaurantId);
 		//});
->>>>>>> 136dc2715139208e5ee918a5fd6be40ae669b3e3
 	}
 
 	ngOnDestroy() {

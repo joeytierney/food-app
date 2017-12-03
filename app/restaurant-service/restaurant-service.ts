@@ -10,15 +10,8 @@ export class Restaurant {
 			public imageURL: string,
 			public hours: string,
 			public cuisines: Array<string>,
-<<<<<<< HEAD
-			//public Lat: number,
-			//public Lng: number,
-			public facilities: Array<string>) {
-=======
-			//public LatLng: Array<number>,
 			public facilities: Array<string>,
 			public reviews: Array<string>) {
->>>>>>> 136dc2715139208e5ee918a5fd6be40ae669b3e3
 
 	}
 }// end Restaurant class
