@@ -18,7 +18,7 @@ var RestaurantItemComponent = (function () {
         this.reviews = [];
     } // end constructor
     RestaurantItemComponent.prototype.ngOnInit = function () {
-        //this.imgUrl = '/images/' + this.restaurant.id + '.jpg';
+        //this.imageURL = '/images/' + this.restaurant.id + '.jpg';
         this.reviews = this.restaurant.reviews;
         console.log(this.reviews);
         //this.imgUrl = '/images/' + this.restaurant.id + '.jpg';

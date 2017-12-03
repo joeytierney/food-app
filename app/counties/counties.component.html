@@ -1,0 +1,6 @@
+<select [(ngModel)]="countyChosen">
+    <ng-container *ngFor="let c of counties">
+        <option [ngValue]="co">{{c}}</option>
+    </ng-container>
+</select>
+<p>{{countyChosen}}</p>

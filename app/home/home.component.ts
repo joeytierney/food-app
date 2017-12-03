@@ -1,51 +1,38 @@
 import {Component, Input, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Restaurant, RestaurantService} from '../restaurant-service/restaurant-service';
+import {CountyService} from '../counties/counties-service';
+import {County} from '../county/county';
+import {Town} from '../town/town';
+
+
 
 @Component({
     moduleId:     module.id,
     templateUrl: 'home.component.html',
-    providers:	[RestaurantService]
+    providers:	[RestaurantService, CountyService]
 })
-export default class HomeComponent implements OnInit, OnDestroy{
+export default class HomeComponent {
 
 	restaurants: Array<Restaurant> = [];
 	subscriberParams: any = "";
 
-	constructor(private restaurantService: RestaurantService, private route: ActivatedRoute) {
+	countyChosen: string;
+	county: string;
+	counties: County[];
+
+	towns: Town[];
+
+	selectedCounty: County = new County(0,"");
+
+	constructor(private restaurantService: RestaurantService, private countyService: CountyService, private route: ActivatedRoute) {
 		this.restaurants = restaurantService.getRestaurants();
+		this.counties = this.countyService.getCounties();
 	}// end constructor
 
-	ngOnInit() {
-
-		if(this.subscriberParams != "") {
-			this.subscriberParams = this.route.params.subscribe(params => {
-			let restaurantCounty: string = params['county'];	// set restaurant county
-			console.log(restaurantCounty);
-			this.restaurants = this.restaurantService.getRestaurantsByCounty(restaurantCounty);	// get restaurant by county
-			//this.restaurant.imageURL = 'images/' + this.restaurant.id + '.jpg';	// set image based on restaurant id
-			});
-		} else {
-			this.restaurants = this.restaurantService.getRestaurants();
-		}
-
-		
-
-		//this.subscriberParams = this.route.params.subscribe(params => {
-			//let restaurantCounty: string = params['county'];	// set restaurant county
-			//console.log(restaurantCounty);
-			//this.restaurants = this.restaurantService.getRestaurantsByCounty(restaurantCounty);	// get restaurant by county
-			//this.restaurant.imageURL = 'images/' + this.restaurant.id + '.jpg';	// set image based on restaurant id
-		//});
+	onSelect(countyId: number) {
+		this.restaurants = this.restaurantService.getRestaurants().filter((item)=> item.countyId == countyId);
+		this.towns = this.countyService.getTowns().filter((item)=> item.countyId == countyId);
 	}
 
-	ngOnDestroy() {
-		//this.subscriberParams.unsubscribe();
-	}// end OnDestroy
-	
-	//restaurants: Array<Restaurant> = [];
-
-	//constructor(restaurantService: RestaurantService) {
-	//	this.restaurants = restaurantService.getRestaurants();
-	//}
 }

@@ -11,44 +11,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var restaurant_service_1 = require('../restaurant-service/restaurant-service');
+var counties_service_1 = require('../counties/counties-service');
+var county_1 = require('../county/county');
 var HomeComponent = (function () {
-    function HomeComponent(restaurantService, route) {
+    function HomeComponent(restaurantService, countyService, route) {
         this.restaurantService = restaurantService;
+        this.countyService = countyService;
         this.route = route;
         this.restaurants = [];
         this.subscriberParams = "";
+        this.selectedCounty = new county_1.County(0, "");
         this.restaurants = restaurantService.getRestaurants();
+        this.counties = this.countyService.getCounties();
     } // end constructor
-    HomeComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        if (this.subscriberParams != "") {
-            this.subscriberParams = this.route.params.subscribe(function (params) {
-                var restaurantCounty = params['county']; // set restaurant county
-                console.log(restaurantCounty);
-                _this.restaurants = _this.restaurantService.getRestaurantsByCounty(restaurantCounty); // get restaurant by county
-                //this.restaurant.imageURL = 'images/' + this.restaurant.id + '.jpg';	// set image based on restaurant id
-            });
-        }
-        else {
-            this.restaurants = this.restaurantService.getRestaurants();
-        }
-        //this.subscriberParams = this.route.params.subscribe(params => {
-        //let restaurantCounty: string = params['county'];	// set restaurant county
-        //console.log(restaurantCounty);
-        //this.restaurants = this.restaurantService.getRestaurantsByCounty(restaurantCounty);	// get restaurant by county
-        //this.restaurant.imageURL = 'images/' + this.restaurant.id + '.jpg';	// set image based on restaurant id
-        //});
+    HomeComponent.prototype.onSelect = function (countyId) {
+        this.restaurants = this.restaurantService.getRestaurants().filter(function (item) { return item.countyId == countyId; });
+        this.towns = this.countyService.getTowns().filter(function (item) { return item.countyId == countyId; });
     };
-    HomeComponent.prototype.ngOnDestroy = function () {
-        //this.subscriberParams.unsubscribe();
-    }; // end OnDestroy
     HomeComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             templateUrl: 'home.component.html',
-            providers: [restaurant_service_1.RestaurantService]
+            providers: [restaurant_service_1.RestaurantService, counties_service_1.CountyService]
         }), 
-        __metadata('design:paramtypes', [restaurant_service_1.RestaurantService, router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [restaurant_service_1.RestaurantService, counties_service_1.CountyService, router_1.ActivatedRoute])
     ], HomeComponent);
     return HomeComponent;
 }());
