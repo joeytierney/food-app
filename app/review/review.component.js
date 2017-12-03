@@ -20,7 +20,7 @@ var ReviewComponent = (function () {
         this.reviewMessages.push(this.reviewMessage);
         this.restaurantService.reviews.push(this.reviewMessage);
         this.reviewMessage = "";
-        console.log(this.restaurantService.reviews);
+        //console.log(this.restaurantService.reviews); //use in order to view inputted reviews
     };
     __decorate([
         core_1.Input(), 

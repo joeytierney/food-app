@@ -20,9 +20,7 @@ var menubar_component_1 = require('./menubar/menubar.component');
 var pagenotfound_component_1 = require('./pagenotfound/pagenotfound.component');
 var restaurant_item_component_1 = require('./restaurant-item/restaurant-item.component');
 var services_component_1 = require('./services/services.component');
-var nav_area_component_1 = require('./nav-area/nav-area.component');
 var restaurant_detail_component_1 = require('./restaurant-detail/restaurant-detail.component');
-var map_component_1 = require('./map/map.component');
 var review_component_1 = require('./review/review.component');
 var score_component_1 = require('./score/score.component');
 var AppModule = (function () {
@@ -49,9 +47,7 @@ var AppModule = (function () {
                 pagenotfound_component_1.default,
                 restaurant_item_component_1.default,
                 home_component_1.default,
-                nav_area_component_1.default,
                 restaurant_detail_component_1.default,
-                map_component_1.default,
                 review_component_1.default,
                 score_component_1.default
             ],

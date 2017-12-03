@@ -11,9 +11,7 @@ import MenuBarComponent from './menubar/menubar.component';
 import PageNotFoundComponent from './pagenotfound/pagenotfound.component';
 import RestaurantItemComponent from './restaurant-item/restaurant-item.component';
 import ServicesComponent from './services/services.component';
-import NavAreaComponent from './nav-area/nav-area.component';
 import RestaurantDetailComponent from './restaurant-detail/restaurant-detail.component';
-import MapComponent from './map/map.component';
 import ReviewComponent from './review/review.component';
 import ScoreComponent from './score/score.component';
 
@@ -38,9 +36,7 @@ import ScoreComponent from './score/score.component';
         PageNotFoundComponent,
         RestaurantItemComponent,
         HomeComponent,
-        NavAreaComponent,
         RestaurantDetailComponent,
-        MapComponent,
         ReviewComponent,
         ScoreComponent
     ],

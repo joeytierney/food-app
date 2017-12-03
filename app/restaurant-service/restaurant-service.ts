@@ -4,7 +4,6 @@ export class Restaurant {
 	constructor(
 			public id: number,
 			public countyId: number,
-			// add towns
 			public county: string,
 			public name: string,
 			public blurb: string,

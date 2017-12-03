@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, OnDestroy} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Restaurant, RestaurantService} from '../restaurant-service/restaurant-service';
 import {ActivatedRoute} from '@angular/router';
 
@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
 	templateUrl:	'restaurant-item.component.html'
 })
 
-export default class RestaurantItemComponent implements OnInit, OnDestroy {
+export default class RestaurantItemComponent implements OnInit{
 
 	reviews: Array<string> = [];
 
@@ -28,8 +28,4 @@ export default class RestaurantItemComponent implements OnInit, OnDestroy {
 	ngOnInit(){
 		this.reviews = this.restaurant.reviews;
 	}
-
-	ngOnDestroy() {
-		//this.subscriberParams.unsubscribe();
-	}// end OnDestroy
 }

@@ -20,9 +20,6 @@ var RestaurantItemComponent = (function () {
     RestaurantItemComponent.prototype.ngOnInit = function () {
         this.reviews = this.restaurant.reviews;
     };
-    RestaurantItemComponent.prototype.ngOnDestroy = function () {
-        //this.subscriberParams.unsubscribe();
-    }; // end OnDestroy
     __decorate([
         // end constructor
         core_1.Input(), 

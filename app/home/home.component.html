@@ -22,18 +22,15 @@
 
     <li class="dropdown-cuisine">
     <label>Cuisine Type:</label>
-      <select [(ngModel)]="selectedCounty.id" (change)="onSelect($event.target.value)">
-        <option value="0">--Select--</option>
-        <option *ngFor="let county of counties" value= {{county.id}}>{{county.name}}</option>
-      </select>
+      <select>
+         <option *ngIf='selectedCounty.id == 0' value="0">--Select--</option>
+        </select>
     </li>
 
     <li class="dropdown-rating">
-    <label>Rating:</label>
-      <select [(ngModel)]="selectedCounty.id" (change)="onSelect($event.target.value)">
-        <option value="0">--Select--</option>
-        <option *ngFor="let county of counties" value= {{county.id}}>{{county.name}}</option>
-      </select>
+    <select>
+          <option *ngIf='selectedCounty.id == 0' value="0">--Select--</option>
+        </select>
     </li>
 
 </ul>

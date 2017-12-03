@@ -10,9 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var Restaurant = (function () {
-    function Restaurant(id, countyId, 
-        // add towns
-        county, name, blurb, address, imageURL, hours, cuisines, facilities, reviews, avgprice, score) {
+    function Restaurant(id, countyId, county, name, blurb, address, imageURL, hours, cuisines, facilities, reviews, avgprice, score) {
         this.id = id;
         this.countyId = countyId;
         this.county = county;
