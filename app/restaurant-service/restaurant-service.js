@@ -10,7 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var Restaurant = (function () {
-    function Restaurant(id, countyId, county, name, blurb, address, imageURL, hours, cuisines, facilities, reviews, avgprice, score) {
+    function Restaurant(id, countyId, 
+        // add towns
+        county, name, blurb, address, imageURL, hours, cuisines, facilities, reviews, avgprice, score) {
         this.id = id;
         this.countyId = countyId;
         this.county = county;
@@ -33,6 +35,7 @@ var RestaurantService = (function () {
         this.counties = [];
         this.reviews = [];
         this.towns = [];
+        this.cuisines = [];
         this.reviews = [
             "This restaurant was suggested to us by our hotel staff and it was completely on point. " +
                 "She had the fish of the day and I had the rib eye steak with blue cheese crust and sauteed mushrooms. Both meals were amazing. " +
@@ -72,7 +75,8 @@ var RestaurantService = (function () {
         this.counties = [
             "Dublin", "Cork", "Limerick", "Galway", "Kilkenny", "Wexford"
         ];
-        this.towns = [];
+        this.towns = ['Dublin City', 'Dublin 4', 'Douglas', 'Cork City', 'Limerick City', 'Galway City', 'Oranmore', 'Kilkenny', 'Clonroche', 'Wexford City'];
+        this.cuisines = ['Asian', 'Chinese', 'European', 'French', 'Indian', 'Irish', 'Italian', 'Seafood', 'Thai'];
     } // end constructor()
     RestaurantService.prototype.getRestaurants = function () {
         return this.restaurants;
@@ -82,6 +86,9 @@ var RestaurantService = (function () {
     }; // end getRestaurantById()
     RestaurantService.prototype.getCounties = function () {
         return this.counties;
+    };
+    RestaurantService.prototype.getTowns = function () {
+        return this.towns;
     };
     RestaurantService.prototype.getCountyById = function (id) {
         return this.counties[id];

@@ -17,16 +17,16 @@ export class CountyService {
 
     getTowns() {
         return [
-            new Town(1, 1, 'Clare City'),
-            new Town(2, 1, 'Ennis'),
-            new Town(3, 2, 'Cork City'),
-            new Town(4, 3, 'Dublin City'),
-            new Town(5, 3, 'Swords' ),
-            new Town(6, 4, 'Galway City'),
-            new Town(7, 4, 'Salthill'),
-            new Town(8, 5, 'Waterford City' ),
-            new Town(9, 5, 'Waterford City' ),
-            new Town(10, 6, 'Wexford City')
+            new Town(1, 1, 'Dublin City'),
+            new Town(2, 1, 'Dublin 4'),
+            new Town(1, 2, 'Douglas'),
+            new Town(2, 2, 'Cork City'),
+            new Town(1, 3, 'Limerick City'),
+            new Town(1, 4, 'Galway City'),
+            new Town(2, 4, 'Oranmore'),
+            new Town(1, 5, 'Kilkenny'),
+            new Town(1, 6, 'Clonroche'),
+            new Town(2, 6, 'Wexford City')
         ];
     }
 }

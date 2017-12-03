@@ -12,29 +12,38 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var restaurant_service_1 = require('../restaurant-service/restaurant-service');
 var counties_service_1 = require('../counties/counties-service');
+var cuisines_service_1 = require('../cuisines/cuisines-service');
 var county_1 = require('../county/county');
 var HomeComponent = (function () {
-    function HomeComponent(restaurantService, countyService, route) {
+    function HomeComponent(restaurantService, countyService, cuisineService, route) {
         this.restaurantService = restaurantService;
         this.countyService = countyService;
+        this.cuisineService = cuisineService;
         this.route = route;
         this.restaurants = [];
         this.subscriberParams = "";
         this.selectedCounty = new county_1.County(0, "");
         this.restaurants = restaurantService.getRestaurants();
         this.counties = this.countyService.getCounties();
+        this.towns = this.countyService.getTowns();
+        this.cuisines = this.cuisineService.getCuisines();
     } // end constructor
     HomeComponent.prototype.onSelect = function (countyId) {
         this.restaurants = this.restaurantService.getRestaurants().filter(function (item) { return item.countyId == countyId; });
         this.towns = this.countyService.getTowns().filter(function (item) { return item.countyId == countyId; });
     };
+    HomeComponent.prototype.onSelectCuisine = function (cuisineType) {
+        //this.restaurants = this.restaurantService.getRestaurants().filter((item)=> item.countyId == countyId);
+        //this.towns = this.countyService.getTowns().filter((item)=> item.countyId == countyId);
+        this.cuisines = this.cuisineService.getCuisines().filter(function (item) { return item.id == id; });
+    };
     HomeComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             templateUrl: 'home.component.html',
-            providers: [restaurant_service_1.RestaurantService, counties_service_1.CountyService]
+            providers: [restaurant_service_1.RestaurantService, counties_service_1.CountyService, cuisines_service_1.CuisinesService]
         }), 
-        __metadata('design:paramtypes', [restaurant_service_1.RestaurantService, counties_service_1.CountyService, router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [restaurant_service_1.RestaurantService, counties_service_1.CountyService, cuisines_service_1.CuisinesService, router_1.ActivatedRoute])
     ], HomeComponent);
     return HomeComponent;
 }());

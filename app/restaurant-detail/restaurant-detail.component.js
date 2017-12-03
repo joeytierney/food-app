@@ -19,12 +19,6 @@ var RestaurantDetailComponent = (function () {
     RestaurantDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.subscriberParams = this.route.params.subscribe(function (params) {
-            var restaurantCounty = params['county']; // set restaurant county
-            console.log(restaurantCounty);
-            //this.restaurant = this.restaurantService.getRestaurantsByCounty(restaurantCounty);	// get restaurant by county
-            //this.restaurant.imageURL = 'images/' + this.restaurant.id + '.jpg';	// set image based on restaurant id
-        });
-        this.subscriberParams = this.route.params.subscribe(function (params) {
             var restaurantId = +params['id']; // set restaurant id
             _this.restaurant = _this.restaurantService.getRestaurantById(restaurantId); // get restaurant by id
             _this.restaurant.imageURL = 'images/' + _this.restaurant.id + '.jpg'; // set image based on restaurant id

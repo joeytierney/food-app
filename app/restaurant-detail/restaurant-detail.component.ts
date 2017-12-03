@@ -10,10 +10,8 @@ import {RestaurantService, Restaurant} from '../restaurant-service/restaurant-se
 
 export default class RestaurantDetailComponent implements OnInit, OnDestroy {
 
-	//@Input() restaurantInput: Restaurant;
 	restaurant: Restaurant;
 	
-
 	subscriberParams: any;
 	imageURL: string;
 	mapImage: string;
@@ -23,13 +21,6 @@ export default class RestaurantDetailComponent implements OnInit, OnDestroy {
 
 	}// end constructor
 	ngOnInit() {
-
-		this.subscriberParams = this.route.params.subscribe(params => {
-			let restaurantCounty: string = params['county'];	// set restaurant county
-			console.log(restaurantCounty);
-			//this.restaurant = this.restaurantService.getRestaurantsByCounty(restaurantCounty);	// get restaurant by county
-			//this.restaurant.imageURL = 'images/' + this.restaurant.id + '.jpg';	// set image based on restaurant id
-		});
 
 		this.subscriberParams = this.route.params.subscribe(params => {
 			let restaurantId: number = +params['id'];	// set restaurant id

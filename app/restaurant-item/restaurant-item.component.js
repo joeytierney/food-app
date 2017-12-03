@@ -18,14 +18,7 @@ var RestaurantItemComponent = (function () {
         this.reviews = [];
     } // end constructor
     RestaurantItemComponent.prototype.ngOnInit = function () {
-        //this.imageURL = '/images/' + this.restaurant.id + '.jpg';
         this.reviews = this.restaurant.reviews;
-        console.log(this.reviews);
-        //this.imgUrl = '/images/' + this.restaurant.id + '.jpg';
-        //this.subscriberParams = this.route.params.subscribe(params => {
-        //	let restaurantId: number = +params['id'];
-        //	this.restaurant = this.restaurantService.getRestaurantById(restaurantId);
-        //});
     };
     RestaurantItemComponent.prototype.ngOnDestroy = function () {
         //this.subscriberParams.unsubscribe();

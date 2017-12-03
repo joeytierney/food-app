@@ -26,16 +26,16 @@ var CountyService = (function () {
     };
     CountyService.prototype.getTowns = function () {
         return [
-            new town_1.Town(1, 1, 'Clare City'),
-            new town_1.Town(2, 1, 'Ennis'),
-            new town_1.Town(3, 2, 'Cork City'),
-            new town_1.Town(4, 3, 'Dublin City'),
-            new town_1.Town(5, 3, 'Swords'),
-            new town_1.Town(6, 4, 'Galway City'),
-            new town_1.Town(7, 4, 'Salthill'),
-            new town_1.Town(8, 5, 'Waterford City'),
-            new town_1.Town(9, 5, 'Waterford City'),
-            new town_1.Town(10, 6, 'Wexford City')
+            new town_1.Town(1, 1, 'Dublin City'),
+            new town_1.Town(2, 1, 'Dublin 4'),
+            new town_1.Town(1, 2, 'Douglas'),
+            new town_1.Town(2, 2, 'Cork City'),
+            new town_1.Town(1, 3, 'Limerick City'),
+            new town_1.Town(1, 4, 'Galway City'),
+            new town_1.Town(2, 4, 'Oranmore'),
+            new town_1.Town(1, 5, 'Kilkenny'),
+            new town_1.Town(1, 6, 'Clonroche'),
+            new town_1.Town(2, 6, 'Wexford City')
         ];
     };
     CountyService = __decorate([

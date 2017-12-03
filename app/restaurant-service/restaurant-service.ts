@@ -3,10 +3,11 @@ import {Injectable} from '@angular/core';
 export class Restaurant {
 	constructor(
 			public id: number,
-			public countyId: number;
+			public countyId: number,
+			// add towns
 			public county: string,
 			public name: string,
-			public blurb: string;
+			public blurb: string,
 			public address: string,
 			public imageURL: string,
 			public hours: string,
@@ -28,6 +29,8 @@ export class RestaurantService {
 	public reviews: Array<string> = [];
 
 	public towns: Array<string> = [];
+
+	public cuisines: Array<string> = [];
 
 	constructor() {
 
@@ -96,7 +99,10 @@ export class RestaurantService {
             "Dublin",  "Cork", "Limerick", "Galway", "Kilkenny", "Wexford"
         ];
 
-        this.towns = [];
+        this.towns = ['Dublin City', 'Dublin 4', 'Douglas', 'Cork City', 'Limerick City', 'Galway City', 'Oranmore', 'Kilkenny', 'Clonroche', 'Wexford City'];
+
+        this.cuisines = ['Asian', 'Chinese', 'European', 'French', 'Indian', 'Irish', 'Italian', 'Seafood', 'Thai'];
+
 	}// end constructor()
 	
 	getRestaurants(): Array<Restaurant> {
@@ -109,6 +115,10 @@ export class RestaurantService {
 
 	getCounties(): Array<string> {
 		return this.counties;
+	}
+
+	getTowns(): Array<string> {
+		return this.towns;
 	}
 
 	getCountyById(id: number) {
