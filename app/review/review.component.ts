@@ -21,6 +21,6 @@ export default class ReviewComponent {
         this.reviewMessages.push(this.reviewMessage);
         this.restaurantService.reviews.push(this.reviewMessage);
         this.reviewMessage = "";
-        //console.log(this.restaurantService.reviews); //use in order to view inputted reviews
+        console.log(this.restaurantService.reviews); //use in order to view inputted reviews
     }
 }
