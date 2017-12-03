@@ -15,6 +15,7 @@ import NavAreaComponent from './nav-area/nav-area.component';
 import RestaurantDetailComponent from './restaurant-detail/restaurant-detail.component';
 import MapComponent from './map/map.component';
 import ReviewComponent from './review/review.component';
+import ScoreComponent from './score/score.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import ReviewComponent from './review/review.component';
         NavAreaComponent,
         RestaurantDetailComponent,
         MapComponent,
-        ReviewComponent
+        ReviewComponent,
+        ScoreComponent
     ],
     bootstrap: [ApplicationComponent]
 })

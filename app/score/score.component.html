@@ -1,0 +1,12 @@
+<style>
+.glyphicon-star{
+	color: orange;
+}
+</style>
+<div>
+    <span><b>Average rating: </b>{{ score }}</span>
+    <span *ngFor="let s of starsEmpty"
+          class="glyphicon glyphicon-star myStarClass"
+          [class.glyphicon-star-empty]="s">
+    </span>
+</div>

@@ -1,5 +1,9 @@
 <div class="col-sm-4">
+	<img [attr.src]="restaurant.imageURL"/>
 	<h2>{{restaurant.name}}</h2>
-	<p>{{restaurant.blurb}} </p>
+	<!--<p>{{restaurant.blurb}}</p>-->
+	<div><b>Location:</b> {{restaurant.address}}</div>
+	<div><osl-score score="{{restaurant.score}}"></osl-score>
+	<p><b>Average price: </b>€{{restaurant.avgprice}}</p>
 	<p><a class="btn btn-primary" [routerLink]="['/details', restaurant.id]" role="button">View details &raquo;</a></p>
 </div>

@@ -24,6 +24,7 @@ var nav_area_component_1 = require('./nav-area/nav-area.component');
 var restaurant_detail_component_1 = require('./restaurant-detail/restaurant-detail.component');
 var map_component_1 = require('./map/map.component');
 var review_component_1 = require('./review/review.component');
+var score_component_1 = require('./score/score.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -51,7 +52,8 @@ var AppModule = (function () {
                 nav_area_component_1.default,
                 restaurant_detail_component_1.default,
                 map_component_1.default,
-                review_component_1.default
+                review_component_1.default,
+                score_component_1.default
             ],
             bootstrap: [application_component_1.default]
         }), 
